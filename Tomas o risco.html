@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MAGOY</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- TIPOGRAFÍA -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Redacted+Script:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  
+<header class="top-menu">
+  <nav class="menu-container">
+<a href="index.html#about">ABOUT</a>
+<a href="index.html#works">WORKS</a>
+<a href="index.html#contact">CONTACT</a>
+  </nav>
+</header>
+
+<main class="project-page">
+
+  <section class="project-TOR">
+    <h1>TOMAS O RISCO?</h1>
+
+    <p class="project-intro">
+      Desde la Xunta de Galicia se pide una nueva campaña para concienciar a los adolescentes gallegos sobre la existencia y los efectos de las ITS, algo que hoy en día sigue siendo tabú y carga con muchos prejuicios. Para el desarrollo de esta campaña nos centramos en el desconocimiento que podemos a llegara tener en el día a día de muchas cosas. Algo que siempre esta de moda son los tatuajes en idiomas ajenos, pero la mayoría de estos tatuajes prometen un significado y acaban diciendo otra cosa y no somos conscientes. La campaña “¿Tomas o risco?” presenta una propuesta visualmente atractiva para sensibilizar a la juventud gallega sobre las infecciones de transmisión sexual (ITS). Empleando la moda urbana y la cultura visual como canales de comunicación, introduce camisetas y totebags con mensajes en japonés que, en un primer momento, parecen diseños estéticos, pero esconden los nombres y síntomas de diversas ITS. La idea busca generar curiosidad y conversación, llevando a los jóvenes a descubrir su significado real y provocando así una reflexión sobre la invisibilidad de las ITS: “Las ITS están ahí, aunque no las veas.
+    </p>
+  </section>
+
+  <section class="project-gallery-TOR">
+    <img src="assets/POR.png">
+  </section>
+
+</main>
+
+
+
+
+<script>
+// Menú que se vuelve más transparente al hacer scroll
+const topMenu = document.querySelector('.top-menu');
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const maxScroll = 500; // hasta dónde se hace transparente
+  let opacity = 1 - scrollY / maxScroll;
+  if (opacity < 0.3) opacity = 0.3; // mínimo de transparencia
+  topMenu.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+});
+</script>
+</body>
+</html>
+
+

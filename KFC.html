@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MAGOY</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- TIPOGRAFÍA -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Redacted+Script:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+<header class="top-menu">
+  <nav class="menu-container">
+<a href="index.html#about">ABOUT</a>
+<a href="index.html#works">WORKS</a>
+<a href="index.html#contact">CONTACT</a>
+  </nav>
+</header>
+
+
+  
+<main class="project-page">
+
+  <section class="project-kfc">
+    <h1>BATTLE FOR THE CHICKEN</h1>
+
+    <p class="project-intro">
+      En KFC siempre buscan estar al día con las tendencias y conectados con el mundo de los videojuegos, siendo Fortnite una de las referencias constantes. Con el objetivo de llegar al público gamer, se creó la colaboración Fortnite x KFC. Para impulsar esta alianza, se aprovechó la obsesión de los jugadores por la exclusividad y las recompensas: están dispuestos a esforzarse al máximo, incluso a frustrarse o “pelear”, para conseguir objetos únicos como skins, mochilas o picos. KFC trasladó ese espíritu competitivo y el deseo de estatus dentro del juego al mundo real, haciendo que el esfuerzo digital se reflejara en la experiencia en sus restaurantes.
+    </p>
+  </section>
+
+ <section class="project-gallery">
+  <div class="video-container">
+    <video id="project-gallery-video">
+      <source src="assets/Casestudy_KFC_MariaGayoso_IreneFernandez.mp4" type="video/mp4">
+    </video>
+    <div id="video-overlay" class="video-overlay">Play me</div>
+  </div>
+</section>
+
+
+</main>
+
+
+
+
+<script>
+// Menú que se vuelve más transparente al hacer scroll
+const topMenu = document.querySelector('.top-menu');
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const maxScroll = 500; // hasta dónde se hace transparente
+  let opacity = 1 - scrollY / maxScroll;
+  if (opacity < 0.3) opacity = 0.3; // mínimo de transparencia
+  topMenu.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+});
+
+
+const video = document.getElementById('project-gallery-video');
+const overlay = document.getElementById('video-overlay');
+
+// Cuando se hace clic en el overlay
+overlay.addEventListener('click', () => {
+  video.play();
+  overlay.classList.add('hidden');
+});
+
+// Cuando se hace clic en el video
+video.addEventListener('click', () => {
+  if (!video.paused) {
+    video.pause();
+    overlay.classList.remove('hidden');
+  } else {
+    video.play();
+    overlay.classList.add('hidden');
+  }
+});
+
+</script>
+</body>
+</html>
+
+

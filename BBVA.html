@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MAGOY</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- TIPOGRAFÍA -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Redacted+Script:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  
+<header class="top-menu">
+  <nav class="menu-container">
+<a href="index.html#about">ABOUT</a>
+<a href="index.html#works">WORKS</a>
+<a href="index.html#contact">CONTACT</a>
+  </nav>
+</header>
+
+<main class="project-page">
+
+  <section class="project-hero">
+    <h1>DE NADA, COLCHONES DE ESPAÑA</h1>
+
+    <p class="project-intro">
+      BBVA busca potenciar sus planes de pensiones en un momento en que la confianza en la banca está debilitada, proyectándose como una entidad sólida, innovadora y orientada al futuro. La campaña está dirigida a personas mayores de 35 años, sobre todo a quienes tienen cuentas en otros bancos, con la meta de fomentar el traspaso de planes y reforzar la imagen de BBVA como una opción confiable y rentable para la jubilación. Durante mucho tiempo, guardar el dinero “bajo el colchón” se percibía como la manera más segura de protegerlo y como un refugio que daba tranquilidad al pensar en el futuro: tenerlo cerca y bien oculto transmitía control. Hoy, esa concepción de seguridad ha quedado desfasada y necesitamos formas más actuales de sentir que nuestro dinero y nuestro futuro están protegidos y bien cuidados. Con esto en mente, la campaña plantea retirar simbólicamente el colchón como espacio de ahorro. BBVA saca colchones a la calle, acompañados de gráficas que presentan sus nuevos planes de pensiones, mostrando de manera visual el abandono de hábitos antiguos y consolidándose como la nueva fuente de protección, confianza y construcción de un futuro sólido.
+    </p>
+  </section>
+
+  <section class="project-gallery">
+    <img src="assets/Colchones 02.png">
+    <img src="assets/Colchones.png">
+  </section>
+
+</main>
+
+
+
+
+<script>
+// Menú que se vuelve más transparente al hacer scroll
+const topMenu = document.querySelector('.top-menu');
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const maxScroll = 500; // hasta dónde se hace transparente
+  let opacity = 1 - scrollY / maxScroll;
+  if (opacity < 0.3) opacity = 0.3; // mínimo de transparencia
+  topMenu.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+});
+</script>
+</body>
+</html>
+
+

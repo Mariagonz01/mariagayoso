@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MAGOY</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- TIPOGRAFÍA -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Redacted+Script:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  
+<header class="top-menu">
+  <nav class="menu-container">
+<a href="index.html#about">ABOUT</a>
+<a href="index.html#works">WORKS</a>
+<a href="index.html#contact">CONTACT</a>
+  </nav>
+</header>
+
+<main class="project-page">
+
+  <section class="project-Heura">
+    <h1>COMER BIEN ES PARA TODES</h1>
+
+    <p class="project-intro">
+Heura quiere dar el mensaje de que los no-veggies también pueden preferir el No-Pollo, su objetivo es ampliar el público objetivo de Heura como opción saludable para todos. Muchas personas ni se plantean consumir alimentos de origen vegetal porque piensan que están dirigidos únicamente a veganos además también están convencidos de que no sabe igual. Pero Heura está buenísimo y se ha querido transmitir con esta campaña, nos quitamos de los prejuicios y vemos que comer veggie es para todo tipo de personas, para la abuela que cocina todos los domingos, el gymbro de tu gimnasio o ese hincha que no falla con un bocadillo el día de partido. Porque comer bien es para todes, incluso si pensabas que era pollo.    </p>
+  </section>
+
+  <section class="project-gallery-Heura">
+    <img src="assets/Mockup grupo.png">
+  </section>
+
+    <section class="project-gallery-Heura2">
+    <img src="assets/Heuro todo.png">
+  </section>
+
+
+
+</main>
+
+
+
+
+<script>
+// Menú que se vuelve más transparente al hacer scroll
+const topMenu = document.querySelector('.top-menu');
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const maxScroll = 500; // hasta dónde se hace transparente
+  let opacity = 1 - scrollY / maxScroll;
+  if (opacity < 0.3) opacity = 0.3; // mínimo de transparencia
+  topMenu.style.backgroundColor = `rgba(0, 0, 0, ${opacity})`;
+});
+</script>
+</body>
+</html>
+
+
